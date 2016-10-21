@@ -6,27 +6,25 @@ body {
   /*box-sizing: border-box;*/
 }
 
-ul.header {
+li.header {
   background-color: #d8d8d8;
   line-height: 40px;
-  vertical-align: center;
   overflow: hidden;
-}
-
-.header {
-  height: 100px;
+  height: 40px;
   width: 425px;
   border: 0.25px solid #989898;
   margin: 10px;
   padding-left: 10px;
   border-radius: 5px;
   vertical-align: middle;
-} 
+  position: relative;
+}
 
 li {
   list-style-type: none;
   position: relative;
   line-height: 40px;
+  margin-left: 0px;
 }
 
 .letter {
@@ -38,22 +36,27 @@ li {
   position: relative;
 }
 
-.open, .close {
+.open,
+.close {
   color: #5b7bca;
   text-decoration: underline;
   position: absolute;
   right: 20px;
-  visibility:hidden;
+  visibility: hidden;
 }
-.close:before {
-  content: "yuck";
+
+.close:after {
+  content: "";
   visibility: visible;
   display: inline-block;
 }
 
-.input:checked + .close:after {
+.close:after {
   content: "close all";
   visibility: visible;
+  display: inline-block;
+  color: #5b7bca;
+  text-decoration: underline;
 }
 
 .open:before {
@@ -71,10 +74,15 @@ input:checked + .open:before {
   visibility: visible;
 }
 
-.open:hover, .close:hover {
+.open:hover,
+.close:hover {
   cursor: pointer;
 }
-#slide1, #slide2, #slide3, #slide4 {
+
+#slide1,
+#slide2,
+#slide3,
+#slide4 {
   width: 425px;
   height: 40px;
   transition: height 0.5s;
@@ -107,19 +115,16 @@ input:checked ~ #slide2 {
   width: 425px;
   height: 100px;
 }
+
 input:checked ~ #slide3 {
   width: 425px;
   height: 100px;
 }
+
 input:checked ~ #slide4 {
   width: 425px;
   height: 100px;
 }
-
-
-
-
-
 
 
 
