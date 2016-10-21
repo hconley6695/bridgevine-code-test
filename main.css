@@ -1,0 +1,127 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  /*box-sizing: border-box;*/
+}
+
+ul.header {
+  background-color: #d8d8d8;
+  line-height: 40px;
+  vertical-align: center;
+  overflow: hidden;
+}
+
+.header {
+  height: 100px;
+  width: 425px;
+  border: 0.25px solid #989898;
+  margin: 10px;
+  padding-left: 10px;
+  border-radius: 5px;
+  vertical-align: middle;
+} 
+
+li {
+  list-style-type: none;
+  position: relative;
+  line-height: 40px;
+}
+
+.letter {
+  color: #efb15b;
+  font-style: italic;
+}
+
+.box {
+  position: relative;
+}
+
+.open, .close {
+  color: #5b7bca;
+  text-decoration: underline;
+  position: absolute;
+  right: 20px;
+  visibility:hidden;
+}
+.close:before {
+  content: "yuck";
+  visibility: visible;
+  display: inline-block;
+}
+
+.input:checked + .close:after {
+  content: "close all";
+  visibility: visible;
+}
+
+.open:before {
+  content: "open";
+  visibility: visible;
+}
+
+input:checked + .open:after {
+  content: "close";
+  visibility: visible;
+}
+
+input:checked + .open:before {
+  content: "";
+  visibility: visible;
+}
+
+.open:hover, .close:hover {
+  cursor: pointer;
+}
+#slide1, #slide2, #slide3, #slide4 {
+  width: 425px;
+  height: 40px;
+  transition: height 0.5s;
+  overflow: hidden;
+  border: 0.25px solid #989898;
+  margin: 0px 10px;
+  padding-left: 10px;
+  border-radius: 5px;
+  vertical-align: middle;
+}
+
+label {
+  display: inline-block;
+}
+
+label input {
+  visibility: hidden;
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+input:checked ~ #slide1 {
+  width: 425px;
+  height: 100px;
+}
+
+input:checked ~ #slide2 {
+  width: 425px;
+  height: 100px;
+}
+input:checked ~ #slide3 {
+  width: 425px;
+  height: 100px;
+}
+input:checked ~ #slide4 {
+  width: 425px;
+  height: 100px;
+}
+
+
+
+
+
+
+
+
+
+
