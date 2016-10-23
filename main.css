@@ -9,10 +9,8 @@ li.header {
   background-color: #d8d8d8;
   line-height: 40px;
   overflow: hidden;
-  height: 100px;
-/*   height: 40px; */
-  /* width: 425px; */
-  width: 500px;
+  height: 40px; 
+  width: 425px; 
   border: 0.25px solid #989898;
   margin: 10px;
   padding-left: 10px;
@@ -58,8 +56,19 @@ input[type=radio]:checked + .close-all:before {
   visibility: visible;
   
 }
+#toggle-hdr2:checked ~ span:after {
+  content: "sections are open";
+  visibility: visible;
+}
+#slide-hdr:before {
+  content: "all sections are closed"
+}
+#toggle-hdr2:checked ~ #slide-hdr:before {
+  content: "";
+  display: none;
+}
 #toggle-hdr:checked ~ .close-all:before {
-  content: "help";
+  content: "";
   visibility: visible;
 }
 
@@ -141,6 +150,10 @@ input:checked ~ #slide1 {
   width: 425px;
   height: 100px;
 }
+
+/* #toggle-hdr:checked ~ span {
+  background-color: green;
+} */
 
 input:checked ~ #slide2 {
   width: 425px;
