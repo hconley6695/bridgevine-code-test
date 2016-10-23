@@ -5,19 +5,62 @@ body {
   padding: 0;
   /*box-sizing: border-box;*/
 }
-
 li.header {
   background-color: #d8d8d8;
   line-height: 40px;
   overflow: hidden;
-  height: 40px;
-  width: 425px;
+  height: 100px;
+/*   height: 40px; */
+  /* width: 425px; */
+  width: 500px;
   border: 0.25px solid #989898;
   margin: 10px;
   padding-left: 10px;
   border-radius: 5px;
   vertical-align: middle;
   position: relative;
+}
+
+#toggle-hdr {
+  /* visibility: hidden; */
+  position: absolute;
+  top: 10px;
+  left: 380px;
+}
+
+#toggle-hdr2 {
+  /* visibility: hidden; */
+  position: absolute;
+  top: 10px;
+  left: 400px;
+}
+
+.close-all {
+  color: #5b7bca;
+  text-decoration: underline;
+  position: absolute;
+  left: 360px;
+  visibility: hidden;
+  width: 100px;
+}
+
+.close-all:hover {
+  cursor: pointer;
+}
+
+input[type=radio]:checked + .close-all:before {
+  content: "";
+  visibility: visible;
+}
+
+#toggle-hdr2:checked + .close-all:after {
+  content: "close all";
+  visibility: visible;
+  
+}
+#toggle-hdr:checked ~ .close-all:before {
+  content: "help";
+  visibility: visible;
 }
 
 li {
@@ -36,8 +79,7 @@ li {
   position: relative;
 }
 
-.open,
-.close {
+.open {
   color: #5b7bca;
   text-decoration: underline;
   position: absolute;
@@ -45,19 +87,6 @@ li {
   visibility: hidden;
 }
 
-.close:after {
-  content: "";
-  visibility: visible;
-  display: inline-block;
-}
-
-.close:after {
-  content: "close all";
-  visibility: visible;
-  display: inline-block;
-  color: #5b7bca;
-  text-decoration: underline;
-}
 
 .open:before {
   content: "open";
@@ -75,7 +104,7 @@ input:checked + .open:before {
 }
 
 .open:hover,
-.close:hover {
+.close-all:hover {
   cursor: pointer;
 }
 
@@ -94,12 +123,14 @@ input:checked + .open:before {
   vertical-align: middle;
 }
 
+
+
 label {
   display: inline-block;
 }
 
 label input {
-  visibility: hidden;
+  /* visibility: hidden; */
   display: inline-block;
   position: absolute;
   right: 20px;
@@ -125,8 +156,4 @@ input:checked ~ #slide4 {
   width: 425px;
   height: 100px;
 }
-
-
-
-
 
