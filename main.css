@@ -9,8 +9,7 @@ li.header {
   background-color: #d8d8d8;
   line-height: 40px;
   overflow: hidden;
-  height: 100px;
-  /* height: 40px; */ 
+  height: 40px;
   width: 425px; 
   border: 0.25px solid #989898;
   margin: 10px;
@@ -107,12 +106,12 @@ li {
   visibility: visible;
 }
 
-input:checked + label > .open:after {
+input:checked + .open:after {
   content: "close";
   visibility: visible;
 }
 
-input:checked + label > .open:before {
+input:checked + .open:before {
   content: "";
   visibility: visible;
 }
@@ -143,19 +142,19 @@ label {
   display: inline-block;
 }
 
-label input {
-   /*visibility: hidden; */
+label input[type=checkbox] {
+   visibility: hidden;
   display: inline-block;
   position: absolute;
   right: 20px;
   top: 20px;
 }
 
-input:checked ~ label #slide1 {
+input:checked ~ #slide1 {
   width: 425px;
   height: 100px;
 }
-/////////////////////
+/* /////////////////////
 #test1:before {
   content: "this is a test";
   visibility: visible;
@@ -177,7 +176,7 @@ li.section #toggle1:checked + li.header #test1:before {
   content: "";
   visibility: visible;
 }
-////////////////
+//////////////// */
 input:checked ~ #slide2 {
   width: 425px;
   height: 100px;
