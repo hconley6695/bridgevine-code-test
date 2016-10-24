@@ -20,14 +20,14 @@ li.header {
 }
 
 #toggle-hdr {
-  /* visibility: hidden; */
+   /*visibility: hidden; */
   position: absolute;
   top: 10px;
   left: 380px;
 }
 
 #toggle-hdr2 {
-  /* visibility: hidden; */
+   /*visibility: hidden; */
   position: absolute;
   top: 10px;
   left: 400px;
@@ -139,7 +139,7 @@ label {
 }
 
 label input {
-  /* visibility: hidden; */
+   /*visibility: hidden; */
   display: inline-block;
   position: absolute;
   right: 20px;
