@@ -9,7 +9,8 @@ li.header {
   background-color: #d8d8d8;
   line-height: 40px;
   overflow: hidden;
-  height: 40px; 
+  height: 100px;
+  /* height: 40px; */ 
   width: 425px; 
   border: 0.25px solid #989898;
   margin: 10px;
@@ -51,12 +52,12 @@ input[type=radio]:checked + .close-all:before {
   visibility: visible;
 }
 
-#toggle-hdr2:checked + .close-all:after {
+#toggle-hdr2:checked ~ .close-all:after {
   content: "close all";
   visibility: visible;
   
 }
-#toggle-hdr2:checked ~ span:after {
+#toggle-hdr2:checked ~ #slide-hdr:after {
   content: "sections are open";
   visibility: visible;
 }
@@ -70,6 +71,10 @@ input[type=radio]:checked + .close-all:before {
 #toggle-hdr:checked ~ .close-all:before {
   content: "";
   visibility: visible;
+}
+#toggle-hdr:checked ~ #slide1, #slide2, #slide3, #slide4 {
+  height: 40px;
+  width: 425px;
 }
 
 li {
@@ -102,12 +107,12 @@ li {
   visibility: visible;
 }
 
-input:checked + .open:after {
+input:checked + label > .open:after {
   content: "close";
   visibility: visible;
 }
 
-input:checked + .open:before {
+input:checked + label > .open:before {
   content: "";
   visibility: visible;
 }
@@ -146,15 +151,33 @@ label input {
   top: 20px;
 }
 
-input:checked ~ #slide1 {
+input:checked ~ label #slide1 {
   width: 425px;
   height: 100px;
 }
+/////////////////////
+#test1:before {
+  content: "this is a test";
+  visibility: visible;
+  border: 1px solid red;
+}
 
-/* #toggle-hdr:checked ~ span {
-  background-color: green;
-} */
+li #test1:after {
+  border: 1px solid blue;
+  content: "stuff";
+}
 
+
+li > #toggle1:checked + li > #test1:after {
+  content: "miracles happen";
+  visibility: visible;
+} 
+
+li.section #toggle1:checked + li.header #test1:before {
+  content: "";
+  visibility: visible;
+}
+////////////////
 input:checked ~ #slide2 {
   width: 425px;
   height: 100px;
